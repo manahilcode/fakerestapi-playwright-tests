@@ -11,10 +11,10 @@ test('POST create book - Positive', async ({ request }) => {
 
   const body = await response.json();
 
-  // ✅ Assertions
+  //Assertions
   expect(body.title).toBe(TEST_BOOK.title);
 
-  // 📘 Display the created book details
+  //Display the created book details
   console.log('📘 Created Book:', body);
 });
 

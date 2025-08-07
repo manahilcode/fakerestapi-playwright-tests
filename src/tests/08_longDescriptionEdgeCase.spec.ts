@@ -9,7 +9,7 @@ test('GET books with long description', async ({ request }) => {
   const longDescBooks = books.filter((book: any) => book.description && book.description.length >= 10000);
 
   if (longDescBooks.length > 0) {
-    console.log(`📚 Found ${longDescBooks.length} book(s) with long descriptions (>= 10000 chars):`);
+    console.log(` Found ${longDescBooks.length} book(s) with long descriptions (>= 10000 chars):`);
     longDescBooks.forEach((book: any, index: number) => {
       console.log(`  ${index + 1}. Title: ${book.title}`);
       console.log(`     Description Length: ${book.description.length}`);
@@ -17,6 +17,6 @@ test('GET books with long description', async ({ request }) => {
       console.log('     ---');
     });
   } else {
-    console.log("✅ No books with long descriptions detected. Test passed gracefully.");
+    console.log("No books with long descriptions detected. Test passed gracefully.");
   }
 });

@@ -7,7 +7,7 @@ test('GET all books - Positive', async ({ request }) => {
 
   const body = await response.json();
 
-  // ✅ Output the list of all books
+  //Output the list of all books
   console.log('📚 List of All Books:');
   body.forEach((book: any, index: number) => {
     console.log(`${index + 1}. ID: ${book.id}, Title: ${book.title}, Description: ${book.description}`);
